@@ -1,0 +1,19 @@
+version: "3.0"
+services:
+  postgres:
+    container_name: jmeter-elastic-apm-postgres
+    image: postgres
+    environment:
+      POSTGRES_USER: jmeter-elastic-apm-postgres-user
+      POSTGRES_PASSWORD: "12345abcde"
+      POSTGRES_DB: jmeter-elastic-apm
+      PGDATA: /data/postgres
+    volumes:
+      - /home/matus/Work/jmeter-elastic-apm/jmeter-elastic-apm/dev/data/postgres:/data/postgres
+    ports:
+      - "0.0.0.0:5432:5432/tcp"
+  redis:
+    container_name: jmeter-elastic-apm-redis
+    image: matusko/redis
+    ports:
+      - "0.0.0.0:6379:6379/tcp"
