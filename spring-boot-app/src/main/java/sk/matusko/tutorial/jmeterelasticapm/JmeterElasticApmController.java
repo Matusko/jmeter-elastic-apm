@@ -19,11 +19,6 @@ public class JmeterElasticApmController {
         return this.jmeterElasticApmService.pagePets();
     }
 
-    @GetMapping("/pets-cached")
-    public Page<Pet> cachedPagePets() {
-        return this.jmeterElasticApmService.cachedPagePets();
-    }
-
     @GetMapping("/pet-delayed")
     public Pet delayedPet() {
         return this.jmeterElasticApmService.delayedPet();

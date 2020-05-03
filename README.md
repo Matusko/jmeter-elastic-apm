@@ -4,6 +4,7 @@ https://start.spring.io/#!type=gradle-project&language=java&platformVersion=2.2.
 
     ./gradlew build
     ./gradlew bootRun
+    ./gradlew bootRun -PjvmArgs="-javaagent:/home/matus/Work/jmeter-elastic-apm/elastic/apm/elastic-apm-agent-1.15.0.jar -Delastic.apm.config_file=/home/matus/Work/jmeter-elastic-apm/spring-boot-app/elasticapm.properties"
     
 actuator works
 redis connection issue in logs

@@ -25,9 +25,9 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'org.springframework.boot:spring-boot-starter-data-redis-reactive'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.postgresql:postgresql'
+	implementation 'co.elastic.apm:apm-agent-api:1.15.0'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.h2database:h2'
@@ -39,7 +39,9 @@ dependencies {
 }
 
 bootRun {
-	jvmArgs = ["-javaagent:/home/matus/Work/jmeter-elastic-apm/elastic/apm/elastic-apm-agent-1.15.0.jar"]
+	if ( project.hasProperty('jvmArgs') ) {
+		jvmArgs project.jvmArgs.split('\\s+')
+	}
 }
 
 test {
