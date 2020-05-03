@@ -18,3 +18,15 @@ add postgres dependency
     ./gradlew bootRun
 
 no redis connection issue
+
+        modified:   README.md
+        modified:   jmeter-elastic-apm/build.gradle
+        new file:   jmeter-elastic-apm/docker-compose.yml
+        modified:   jmeter-elastic-apm/src/main/java/sk/matusko/tutorial/jmeterelasticapm/JmeterElasticApmApplication.java
+        new file:   jmeter-elastic-apm/src/main/java/sk/matusko/tutorial/jmeterelasticapm/JmeterElasticApmController.java
+        new file:   jmeter-elastic-apm/src/main/java/sk/matusko/tutorial/jmeterelasticapm/JmeterElasticApmService.java
+        new file:   jmeter-elastic-apm/src/main/java/sk/matusko/tutorial/jmeterelasticapm/PetsRepository.java
+        new file:   jmeter-elastic-apm/src/main/java/sk/matusko/tutorial/jmeterelasticapm/models/Pet.java
+        deleted:    jmeter-elastic-apm/src/main/resources/application.properties
+        new file:   jmeter-elastic-apm/src/main/resources/application.yml
+        new file:   jmeter-elastic-apm/src/main/resources/data.sql

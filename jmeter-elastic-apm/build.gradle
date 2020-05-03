@@ -38,6 +38,10 @@ dependencies {
 	testImplementation 'io.projectreactor:reactor-test'
 }
 
+bootRun {
+	jvmArgs = ["-javaagent:/home/matus/Work/jmeter-elastic-apm/elastic/apm/elastic-apm-agent-1.15.0.jar"]
+}
+
 test {
 	useJUnitPlatform()
 }
