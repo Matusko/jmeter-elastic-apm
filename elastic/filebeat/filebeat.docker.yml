@@ -2,7 +2,14 @@ filebeat.inputs:
   - type: log
     enabled: true
     paths:
-      - /usr/share/jmeter/results.csv
+      - /usr/share/jmeter/*.csv
+  - type: log
+    enabled: true
+    paths:
+      - /usr/share/spring-boot-logs/spring-boot-logger.log
+    multiline.pattern: '^\d{4}-\d{2}-\d{2}'
+    multiline.negate: true
+    multiline.match: after
 
 filebeat.config:
   modules:

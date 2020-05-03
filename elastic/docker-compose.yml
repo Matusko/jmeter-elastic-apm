@@ -66,7 +66,8 @@ services:
     volumes:
       - ./filebeat/filebeat.docker.yml:/usr/share/filebeat/filebeat.yml:ro
       - ./elastic/filebeat/log:/var/log/filebeat
-      - ../jmeter/:/usr/share/jmeter/
+      - ../jmeter/results/:/usr/share/jmeter/
+      - ../spring-boot-app/logs/:/usr/share/spring-boot-logs/
     environment:
       - KIBANA_HOST=kibana:5601
     command: ""
